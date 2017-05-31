@@ -11,7 +11,7 @@ import java.util.List;
  * Created by pfms on 04/12/14.
  */
 public class AdjustInstance {
-    private ActivityHandler activityHandler;
+    private IActivityHandler activityHandler;
     private List<IRunActivityHandler> preLaunchActionsArray;
     private String pushToken;
     private Boolean startEnabled = null;
@@ -32,7 +32,7 @@ public class AdjustInstance {
         adjustConfig.startEnabled = startEnabled;
         adjustConfig.startOffline = startOffline;
 
-        activityHandler = ActivityHandler.getInstance(adjustConfig);
+        activityHandler = AdjustFactory.getActivityHandler(adjustConfig);
     }
 
     public void trackEvent(AdjustEvent event) {

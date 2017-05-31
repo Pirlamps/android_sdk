@@ -565,6 +565,7 @@ public class ActivityHandler implements IActivityHandler {
         });
     }
 
+    @Override
     public String getAdid() {
         if (activityState == null) {
             return null;
@@ -572,6 +573,7 @@ public class ActivityHandler implements IActivityHandler {
         return activityState.adid;
     }
 
+    @Override
     public AdjustAttribution getAttribution() {
         return attribution;
     }
