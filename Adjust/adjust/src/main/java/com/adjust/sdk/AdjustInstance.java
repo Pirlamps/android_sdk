@@ -208,6 +208,10 @@ public class AdjustInstance {
         if (!checkActivityHandler()) { return; }
         activityHandler.teardown(deleteState);
         activityHandler = null;
+        preLaunchActionsArray = null;
+        pushToken = null;
+        startEnabled = null;
+        startOffline = false;
     }
 
     public void setPushToken(String token) {
